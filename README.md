@@ -14,8 +14,18 @@ You only need the <a href="http://cran.r-project.org/web/packages/rJava/" target
 Clone this repository and run
 ```
 ./makeRPackage.sh
+R CMD INSTALL jForest_1.0.tar.gz
 ```
 You will need the <a href="http://cran.r-project.org/web/packages/rJava/" target="_blank">rJava</a> and <a href="http://cran.r-project.org/web/packages/roxygen2/" target="_blank">roxygen2</a> libraries.
+
+## Test it !
+A few examples are provided with the R package. You can run them from a R session with the following instructions:
+```
+library("jForest")
+example(jForest)
+example(predict.jForest)
+example(importance)
+```
 
 ## Documentation
 * The *javadoc* is available <a href="http://jeromepaul.github.io/jForest/javadoc/" target="_blank">here</a>.
