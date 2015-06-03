@@ -8,4 +8,4 @@ Depends: rJava (>= 0.9-6)
 Author: Jérôme Paul
 Maintainer: Jérôme Paul <jerome.paul@uclouvain.be>
 Description: Provides R functions to build custom tree ensembles with jForest java framework
-License: GPL-3
+License: GPL-3 + file LICENSE

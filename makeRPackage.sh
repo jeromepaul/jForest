@@ -51,8 +51,8 @@ if [ -a $rpackage ]; then
 fi
 
 mkdir $rpackage
-
 cp DESCRIPTION $rpackage
+cp LICENSE $rpackage
 
 # copying binaries & exec
 mkdir -p $rpackage/inst/java
