@@ -8,7 +8,9 @@ Then run the following line in a shell
 ```
 R CMD INSTALL jForest_1.0.tar.gz
 ```
-You only need the <a href="http://cran.r-project.org/web/packages/rJava/" target="_blank">rJava</a> library to be installed.
+You only need the <a href="http://cran.r-project.org/web/packages/rJava/" target="_blank">rJava</a> library to be installed and configured.
+You might have to run `R CMD javareconf`.
+The java class files were compiled with java version 1.7.0_25.
 
 ### from source
 Clone this repository and run
@@ -32,7 +34,7 @@ example(importance)
 * The documentation of the *R package* is available <a href="http://jeromepaul.github.io/jForest/R-manual/jForest-manual.pdf" target="_blank">here</a>.
 
 ## Copyright and License
-Copyright © 2010-2015, Université catholique de Louvain, Belgium - UCL
+Copyright © 2010-2015, Université catholique de Louvain, Belgium - UCL.
 All rights reserved.
  
 jForest has been developed by <a href="http://jeromepaul.be/" target="_blank">Jérôme Paul</a> (<a href="http://uclouvain.be/mlg" target="_blank">Machine Learning Group (MLG)</a> - <a href="http://www.uclouvain.be/en-icteam.html" target="_blank">Institute of Information and Communication Technologies, Electronics and Applied Mathematics (ICTEAM)</a>) for the <a href="http://www.uclouvain.be" target="_blank">Université catholique de Louvain (UCL)</a>.
