@@ -2,8 +2,8 @@ Encoding: UTF-8
 Package: jForest
 Type: Package
 Title: This is a wrapper to the jForest java framework
-Version: 1.0
-Date: 2015-06-02
+Version: 1.0.1
+Date: 2015-06-22
 Depends: rJava (>= 0.9-6)
 Author: Jérôme Paul
 Maintainer: Jérôme Paul <jerome.paul@uclouvain.be>

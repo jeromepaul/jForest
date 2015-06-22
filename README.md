@@ -3,10 +3,10 @@ jForest is a general framework for Machine Learning. It implements tree ensemble
 
 ## Installation
 ### from the R package
-Download the [jForest package](https://github.com/jeromepaul/jForest/raw/master/jForest_1.0.tar.gz).
+Download the [jForest package](https://github.com/jeromepaul/jForest/raw/master/jForest_1.0.1.tar.gz).
 Then run the following line in a shell
 ```
-R CMD INSTALL jForest_1.0.tar.gz
+R CMD INSTALL jForest_1.0.1.tar.gz
 ```
 You only need the <a href="http://cran.r-project.org/web/packages/rJava/" target="_blank">rJava</a> library to be installed and configured.
 You might have to run `R CMD javareconf`.
@@ -16,7 +16,7 @@ The java class files were compiled with java version 1.7.0_25.
 Clone this repository and run
 ```
 ./makeRPackage.sh
-R CMD INSTALL jForest_1.0.tar.gz
+R CMD INSTALL jForest_1.0.1.tar.gz
 ```
 You will need the <a href="http://cran.r-project.org/web/packages/rJava/" target="_blank">rJava</a> and <a href="http://cran.r-project.org/web/packages/roxygen2/" target="_blank">roxygen2</a> libraries.
 

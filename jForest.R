@@ -254,6 +254,7 @@ predict.jForest <- function(object,newdata,...){
 #'             \code{"Jks"} computes the significance of the features through a Kolmogorov-Smirnov test on the accuracies.
 #'             \code{"Jks.bcr"} computes the significance of the features through a Kolmogorov-Smirnov test on the BCRs.
 #' @param pval a boolean indicating if \code{"Jchisq"}, \code{"Jks"} or \code{"Jks.bcr"} computes p-values or the value of the chi-squared statistic.
+#' @param fdr a boolean indicating if the p-values of \code{"Jchisq"}, \code{"Jks"} or \code{"Jks.bcr"} must be corrected for multiple testing with the FDR correction (see \code{? p.adjust}).
 #' @return a vector containing the importance of each variables.
 #' @references Jerome Paul, Pierre Dupont,
 #'             Inferring statistically significant features from random forests,
@@ -268,7 +269,7 @@ predict.jForest <- function(object,newdata,...){
 #' importance(m,"Jks")
 #' 
 #' @export
-importance <- function(model,type="internal",pval=TRUE){
+importance <- function(model,type="internal",pval=TRUE,fdr=TRUE){
     
     feat.imp = NULL
     
@@ -317,7 +318,12 @@ importance <- function(model,type="internal",pval=TRUE){
     }
     
     if(!is.null(feat.imp)){
+        if(type %in% c("Jchisq","Jks","Jks.bcr") && pval && fdr){
+            feat.imp = p.adjust(feat.imp,"fdr")
+        }
+        
         names(feat.imp) = model$feat.names
+        
     }else{
         stop("no importance computed")
     }
